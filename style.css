@@ -1,0 +1,57 @@
+/* HexaCore Global Styles */
+
+/* Base Styles */
+body {
+    background-color: #000 !important;
+    color: #fff;
+}
+
+/* Glow Utilities */
+.glow-text {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.glow-box {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-box:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Tool Cards */
+.tool-card {
+    position: relative;
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 1.1rem;
+    background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tool-card:hover::before {
+    opacity: 1;
+}
+
+/* Forms */
+select option {
+    background-color: #1a1a1a;
+    color: #fff;
+}
